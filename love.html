@@ -220,36 +220,76 @@
     }
 
     /* ────────────────────────────────
-       VIDEO SECTION
+       PHOTO SECTION
     ──────────────────────────────── */
-    .video-section {
+    .photo-section {
       text-align: center;
     }
-    .video-container {
+    .photo-frame {
       position: relative;
-      padding-bottom: 56.25%; height: 0; overflow: hidden;
-      border-radius: 1.5rem;
-      box-shadow: 0 12px 60px rgba(255,60,150,.35);
+      display: inline-block;
       margin-top: 2rem;
     }
-    .video-container iframe {
-      position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; border: none;
+    .photo-frame::before {
+      content: '';
+      position: absolute; inset: -6px;
+      border-radius: 2rem;
+      background: linear-gradient(135deg, #ff6bae, #c96cff, #ff6bae);
+      background-size: 200% 200%;
+      animation: borderGlow 3s ease infinite;
+      z-index: 0;
     }
+    @keyframes borderGlow {
+      0%,100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+    .photo-frame img {
+      position: relative; z-index: 1;
+      width: min(360px, 88vw);
+      border-radius: 1.6rem;
+      display: block;
+      box-shadow: 0 20px 60px rgba(255,60,150,.4);
+    }
+    /* floating petals around photo */
+    .photo-frame .petal {
+      position: absolute; font-size: 1.6rem;
+      animation: petalFloat 3s ease-in-out infinite;
+      z-index: 2; pointer-events: none;
+    }
+    .photo-frame .petal:nth-child(1) { top:-18px; left:10%; animation-delay:0s; }
+    .photo-frame .petal:nth-child(2) { top:-10px; right:15%; animation-delay:.4s; }
+    .photo-frame .petal:nth-child(3) { bottom:-14px; left:8%; animation-delay:.8s; }
+    .photo-frame .petal:nth-child(4) { bottom:-18px; right:10%; animation-delay:1.2s; }
+    @keyframes petalFloat { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(15deg)} }
 
-    /* video placeholder */
-    .video-placeholder {
-      background: rgba(255,255,255,.06);
-      border: 2px dashed rgba(255,107,157,.4);
-      border-radius: 1.5rem;
-      padding: 3rem 2rem;
-      text-align: center;
-      margin-top: 2rem;
-      color: rgba(255,255,255,.5);
+    /* Happy Birthday text */
+    .hbd-text {
+      margin-top: 2.5rem;
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2.8rem, 10vw, 5rem);
+      background: linear-gradient(135deg, #ffd6ec 0%, #ff6bae 40%, #c96cff 80%, #ffb3d1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: textShimmer 3s linear infinite;
+      line-height: 1.2;
     }
-    .video-placeholder .play-icon { font-size: 4rem; display: block; margin-bottom: 1rem; opacity: .6; }
-    .video-placeholder p { font-size: .95rem; line-height: 1.7; }
-    .video-placeholder strong { color: var(--pink); font-weight: 700; }
+    @keyframes textShimmer {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+    .hbd-sub {
+      margin-top: .7rem;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.6);
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    .hbd-emojis {
+      font-size: 2rem;
+      margin-top: .6rem;
+      display: block;
+      animation: bigBounce 2s ease-in-out infinite;
+    }
 
     /* ────────────────────────────────
        FOOTER WISH
@@ -374,43 +414,22 @@
     </div>
   </section>
 
-  <!-- ══════ VIDEO ══════ -->
-  <section class="reveal video-section" id="video-section">
-    <p class="section-label">Made just for you 🎬</p>
-    <h2 class="section-title">Our Memories 🎥💕</h2>
+  <!-- ══════ PHOTO ══════ -->
+  <section class="reveal photo-section" id="photo-section">
+    <p class="section-label">This is for you, Bujji 🌸</p>
+    <h2 class="section-title">These flowers are yours 💐</h2>
 
-    <!-- 
-      ╔════════════════════════════════════════════════════╗
-      ║  SESHU: Replace VIDEO_ID below with your          ║
-      ║  YouTube video ID or use the drive section        ║
-      ╚════════════════════════════════════════════════════╝
-
-      For YouTube: replace YOUR_VIDEO_ID with the ID from your video URL
-      e.g. https://www.youtube.com/watch?v=ABC123 → VIDEO_ID = ABC123
-
-      For Google Drive: replace the src with:
-      https://drive.google.com/file/d/YOUR_FILE_ID/preview
-    -->
-
-    <div class="video-placeholder" id="videoPlaceholder">
-      <span class="play-icon">▶️</span>
-      <p>
-        <strong>Seshu — add your video here! 🎬</strong><br/><br/>
-        Open <code>love.html</code>, find the <code>&lt;!-- VIDEO --&gt;</code> comment,<br/>
-        and replace this block with the iframe code below:<br/><br/>
-        <strong>YouTube:</strong><br/>
-        <code style="font-size:.8rem;color:#c96cff;">&lt;iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen&gt;&lt;/iframe&gt;</code><br/><br/>
-        <strong>Google Drive:</strong><br/>
-        <code style="font-size:.8rem;color:#c96cff;">&lt;iframe src="https://drive.google.com/file/d/YOUR_FILE_ID/preview" allowfullscreen&gt;&lt;/iframe&gt;</code>
-      </p>
+    <div class="photo-frame">
+      <span class="petal">🌸</span>
+      <span class="petal">🌺</span>
+      <span class="petal">💐</span>
+      <span class="petal">🌹</span>
+      <img src="seshu.jpg" alt="Seshu holding flowers for Bujji" />
     </div>
 
-    <!-- VIDEO: Uncomment and add your link below -->
-    <!--
-    <div class="video-container">
-      <iframe src="https://drive.google.com/file/d/YOUR_FILE_ID/preview" allowfullscreen></iframe>
-    </div>
-    -->
+    <div class="hbd-text">Happy Birthday, Bujji! 🎂</div>
+    <p class="hbd-sub">These flowers are just a tiny piece of how much I love you 💕</p>
+    <span class="hbd-emojis">🎉🥳🎂</span>
   </section>
 
   <!-- ══════ FOOTER WISH ══════ -->
