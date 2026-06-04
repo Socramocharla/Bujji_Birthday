@@ -354,6 +354,32 @@
     }
   ];
 
+  // ── TRACKER SETUP ──
+  // 🔴 SESHU: Paste your Google Apps Script URL below after deploying
+  const SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+
+  const answers = []; // stores chosen answers per question
+
+  function track(payload) {
+    if (!SCRIPT_URL || SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') return;
+    try {
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch(e) {}
+  }
+
+  // Log every page open silently
+  track({
+    type: 'page_opened',
+    time: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+    device: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile 📱' : 'Desktop 💻',
+    browser: navigator.userAgent.substring(0, 80)
+  });
+
   let current = 0;
   let selected = -1;
   const filled = [];
@@ -394,16 +420,31 @@
 
   function nextQuestion() {
     if (selected < 0) return;
-    // fill a heart
+    // fill a heart & save answer
     filled.push(current);
     document.getElementById(`hm${current + 1}`).classList.add('filled');
+
+    // save this answer
+    const q = questions[current];
+    answers[current] = q.opts[selected].e + ' ' + q.opts[selected].t;
 
     if (current < questions.length - 1) {
       current++;
       renderQuestion();
     } else {
-      // complete!
+      // complete! — send all answers to Google Sheet
       document.getElementById('progressBar').style.width = '100%';
+      track({
+        type: 'quiz_completed',
+        time: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        device: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile 📱' : 'Desktop 💻',
+        q1: answers[0] || '',
+        q2: answers[1] || '',
+        q3: answers[2] || '',
+        q4: answers[3] || '',
+        q5: answers[4] || '',
+        q6: answers[5] || ''
+      });
       setTimeout(showDone, 400);
     }
   }
