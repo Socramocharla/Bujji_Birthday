@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Ra,Na Bujji Konda. So Sorry ye na gabbu thalli  💌</title>
+  <title>Happy Birthday Ra,Na Bujji Konda. So Sorry ye na gabbu thalli 💌</title>
   <meta name="description" content="For the most special girl in my world — Bujji, Happy Birthday ❤️" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --pink:   #ff6b9d;
-      --rose:   #ff3f7a;
-      --purple: #c96cff;
-      --gold:   #ffd700;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --pink: #ff6b9d;
+      --rose: #ff3f7a;
+      --purple: #c96cff;
+      --gold: #ffd700;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Nunito', sans-serif;
@@ -27,47 +38,102 @@
 
     /* ─── BG ─── */
     .bg-layer {
-      position: fixed; inset: 0; z-index: 0;
+      position: fixed;
+      inset: 0;
+      z-index: 0;
       background: radial-gradient(ellipse at 20% 30%, #3d004f55 0%, transparent 60%),
-                  radial-gradient(ellipse at 80% 70%, #1a004055 0%, transparent 60%),
-                  #0d001a;
+        radial-gradient(ellipse at 80% 70%, #1a004055 0%, transparent 60%),
+        #0d001a;
     }
+
     .bg-img {
-      position: fixed; inset: 0; z-index: 0;
+      position: fixed;
+      inset: 0;
+      z-index: 0;
       background: url('romantic_bg.png') center/cover no-repeat;
       opacity: 0.12;
     }
 
     /* ─── STARS ─── */
-    .stars { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
     .star {
-      position: absolute; border-radius: 50%; background: #fff;
+      position: absolute;
+      border-radius: 50%;
+      background: #fff;
       animation: twinkle ease infinite;
     }
-    @keyframes twinkle { 0%,100%{opacity:.1;transform:scale(1)} 50%{opacity:.9;transform:scale(1.5)} }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: .1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .9;
+        transform: scale(1.5)
+      }
+    }
 
     /* ─── HEARTS ─── */
-    .floating-hearts { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .floating-hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
     .fh {
-      position: absolute; font-size: 1.2rem; opacity: 0;
+      position: absolute;
+      font-size: 1.2rem;
+      opacity: 0;
       animation: fhRise linear infinite;
     }
+
     @keyframes fhRise {
-      0%   { transform: translateY(110vh) rotate(0deg); opacity: 0; }
-      10%  { opacity: .7; }
-      90%  { opacity: .5; }
-      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+      0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: .7;
+      }
+
+      90% {
+        opacity: .5;
+      }
+
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
     }
 
     /* ─── MAIN WRAPPER ─── */
-    main { position: relative; z-index: 2; }
+    main {
+      position: relative;
+      z-index: 2;
+    }
 
     /* ────────────────────────────────
        HERO SECTION
     ──────────────────────────────── */
     .hero {
       min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 2rem 1rem;
       text-align: center;
       position: relative;
@@ -75,32 +141,68 @@
 
     .birthday-badge {
       display: inline-block;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,107,157,.3);
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 107, 157, .3);
       backdrop-filter: blur(8px);
       padding: .45rem 1.4rem;
       border-radius: 99px;
-      font-size: .82rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--pink);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pink);
       margin-bottom: 1.5rem;
       animation: fadeSlideDown .7s .2s ease both;
     }
-    @keyframes fadeSlideDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
 
     .hero-emoji {
       font-size: 4.5rem;
       animation: bigBounce 2s ease-in-out infinite, fadeIn 1s ease both;
-      display: block; margin-bottom: .5rem;
+      display: block;
+      margin-bottom: .5rem;
     }
-    @keyframes bigBounce { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-16px) scale(1.08)} }
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+    @keyframes bigBounce {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1)
+      }
+
+      50% {
+        transform: translateY(-16px) scale(1.08)
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
 
     .hero h1 {
       font-family: 'Dancing Script', cursive;
       font-size: clamp(2.8rem, 10vw, 5.5rem);
       line-height: 1.15;
       background: linear-gradient(135deg, #ffd6ec 0%, #ff6bae 40%, #c96cff 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       animation: fadeIn 1s .3s ease both;
       margin-bottom: .6rem;
     }
@@ -109,7 +211,8 @@
       font-family: 'Dancing Script', cursive;
       font-size: clamp(3rem, 12vw, 6.5rem);
       background: linear-gradient(135deg, #fff 0%, #ffd6ec 50%, #ffb3d1 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       animation: fadeIn 1s .5s ease both;
       margin-bottom: 1rem;
       display: block;
@@ -117,7 +220,7 @@
 
     .hero-sub {
       font-size: clamp(.95rem, 2.5vw, 1.2rem);
-      color: rgba(255,255,255,.65);
+      color: rgba(255, 255, 255, .65);
       max-width: 400px;
       line-height: 1.7;
       animation: fadeIn 1s .8s ease both;
@@ -125,16 +228,37 @@
     }
 
     .scroll-hint {
-      display: flex; flex-direction: column; align-items: center; gap: .4rem;
-      font-size: .8rem; color: rgba(255,255,255,.4); letter-spacing: .08em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .4rem;
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .4);
+      letter-spacing: .08em;
       animation: fadeIn 1s 1.5s ease both;
     }
-    .scroll-arrow { font-size: 1.4rem; animation: scrollBounce 1.5s ease infinite; }
-    @keyframes scrollBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+
+    .scroll-arrow {
+      font-size: 1.4rem;
+      animation: scrollBounce 1.5s ease infinite;
+    }
+
+    @keyframes scrollBounce {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(6px)
+      }
+    }
 
     /* ─── SECTION STYLES ─── */
     section {
-      max-width: 720px; margin: 0 auto;
+      max-width: 720px;
+      margin: 0 auto;
       padding: 5rem 1.5rem;
     }
 
@@ -143,15 +267,21 @@
     ──────────────────────────────── */
     .section-label {
       text-align: center;
-      font-size: .78rem; text-transform: uppercase; letter-spacing: .15em;
-      color: var(--purple); font-weight: 700; margin-bottom: .6rem;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--purple);
+      font-weight: 700;
+      margin-bottom: .6rem;
     }
+
     .section-title {
       font-family: 'Dancing Script', cursive;
       font-size: clamp(2rem, 6vw, 3rem);
       text-align: center;
       background: linear-gradient(135deg, #ffb3d1, #c96cff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 3rem;
     }
 
@@ -160,9 +290,10 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.2rem;
     }
+
     .reason-card {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
       border-radius: 1.5rem;
       padding: 1.5rem;
       backdrop-filter: blur(12px);
@@ -170,51 +301,91 @@
       opacity: 0;
       animation: cardReveal 0.6s ease forwards;
     }
+
     .reason-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 40px rgba(255,60,150,.25);
+      box-shadow: 0 12px 40px rgba(255, 60, 150, .25);
     }
-    @keyframes cardReveal { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    .reason-icon { font-size: 2rem; margin-bottom: .6rem; }
-    .reason-title { font-weight: 800; font-size: 1.05rem; margin-bottom: .4rem; }
-    .reason-text { color: rgba(255,255,255,.7); font-size: .93rem; line-height: 1.6; }
+
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .reason-icon {
+      font-size: 2rem;
+      margin-bottom: .6rem;
+    }
+
+    .reason-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: .4rem;
+    }
+
+    .reason-text {
+      color: rgba(255, 255, 255, .7);
+      font-size: .93rem;
+      line-height: 1.6;
+    }
 
     /* ────────────────────────────────
        LETTER
     ──────────────────────────────── */
     .letter-wrap {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,107,157,.2);
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 107, 157, .2);
       border-radius: 2rem;
       padding: clamp(1.5rem, 5vw, 3rem);
       backdrop-filter: blur(16px);
       position: relative;
       overflow: hidden;
     }
+
     .letter-wrap::before {
       content: '💌';
-      position: absolute; top: -1rem; right: -1rem;
-      font-size: 8rem; opacity: 0.05;
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      font-size: 8rem;
+      opacity: 0.05;
       pointer-events: none;
     }
+
     .letter-date {
-      font-size: .82rem; color: rgba(255,255,255,.4);
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .4);
       margin-bottom: 1.5rem;
     }
+
     .letter-text {
       font-size: clamp(1rem, 2.5vw, 1.12rem);
       line-height: 2;
-      color: rgba(255,255,255,.85);
+      color: rgba(255, 255, 255, .85);
     }
-    .letter-text p { margin-bottom: 1.2rem; }
+
+    .letter-text p {
+      margin-bottom: 1.2rem;
+    }
+
     .letter-text .highlight {
-      color: #ffb3d1; font-weight: 700;
+      color: #ffb3d1;
+      font-weight: 700;
     }
+
     .letter-sign {
       font-family: 'Dancing Script', cursive;
       font-size: clamp(1.6rem, 5vw, 2.4rem);
       background: linear-gradient(135deg, #ff6bae, #c96cff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-top: 2rem;
       display: block;
     }
@@ -225,42 +396,89 @@
     .photo-section {
       text-align: center;
     }
+
     .photo-frame {
       position: relative;
       display: inline-block;
       margin-top: 2rem;
     }
+
     .photo-frame::before {
       content: '';
-      position: absolute; inset: -6px;
+      position: absolute;
+      inset: -6px;
       border-radius: 2rem;
       background: linear-gradient(135deg, #ff6bae, #c96cff, #ff6bae);
       background-size: 200% 200%;
       animation: borderGlow 3s ease infinite;
       z-index: 0;
     }
+
     @keyframes borderGlow {
-      0%,100% { background-position: 0% 50%; }
-      50%      { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
+
     .photo-frame img {
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
       width: min(360px, 88vw);
       border-radius: 1.6rem;
       display: block;
-      box-shadow: 0 20px 60px rgba(255,60,150,.4);
+      box-shadow: 0 20px 60px rgba(255, 60, 150, .4);
     }
+
     /* floating petals around photo */
     .photo-frame .petal {
-      position: absolute; font-size: 1.6rem;
+      position: absolute;
+      font-size: 1.6rem;
       animation: petalFloat 3s ease-in-out infinite;
-      z-index: 2; pointer-events: none;
+      z-index: 2;
+      pointer-events: none;
     }
-    .photo-frame .petal:nth-child(1) { top:-18px; left:10%; animation-delay:0s; }
-    .photo-frame .petal:nth-child(2) { top:-10px; right:15%; animation-delay:.4s; }
-    .photo-frame .petal:nth-child(3) { bottom:-14px; left:8%; animation-delay:.8s; }
-    .photo-frame .petal:nth-child(4) { bottom:-18px; right:10%; animation-delay:1.2s; }
-    @keyframes petalFloat { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(15deg)} }
+
+    .photo-frame .petal:nth-child(1) {
+      top: -18px;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .photo-frame .petal:nth-child(2) {
+      top: -10px;
+      right: 15%;
+      animation-delay: .4s;
+    }
+
+    .photo-frame .petal:nth-child(3) {
+      bottom: -14px;
+      left: 8%;
+      animation-delay: .8s;
+    }
+
+    .photo-frame .petal:nth-child(4) {
+      bottom: -18px;
+      right: 10%;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes petalFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg)
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(15deg)
+      }
+    }
 
     /* Happy Birthday text */
     .hbd-text {
@@ -268,22 +486,31 @@
       font-family: 'Dancing Script', cursive;
       font-size: clamp(2.8rem, 10vw, 5rem);
       background: linear-gradient(135deg, #ffd6ec 0%, #ff6bae 40%, #c96cff 80%, #ffb3d1 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       background-size: 200% auto;
       animation: textShimmer 3s linear infinite;
       line-height: 1.2;
     }
+
     @keyframes textShimmer {
-      0%   { background-position: 0% center; }
-      100% { background-position: 200% center; }
+      0% {
+        background-position: 0% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
     }
+
     .hbd-sub {
       margin-top: .7rem;
       font-size: 1.1rem;
-      color: rgba(255,255,255,.6);
+      color: rgba(255, 255, 255, .6);
       font-weight: 600;
       letter-spacing: .04em;
     }
+
     .hbd-emojis {
       font-size: 2rem;
       margin-top: .6rem;
@@ -298,201 +525,241 @@
       text-align: center;
       padding: 5rem 1.5rem 4rem;
     }
+
     .cake-spin {
       font-size: 5rem;
-      display: block; margin-bottom: 1rem;
+      display: block;
+      margin-bottom: 1rem;
       animation: bigBounce 2.5s ease-in-out infinite;
     }
+
     .footer-wish h2 {
       font-family: 'Dancing Script', cursive;
       font-size: clamp(2.2rem, 8vw, 4rem);
       background: linear-gradient(135deg, #ffd6ec, #ff6bae, #c96cff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 1rem;
     }
-    .footer-wish p { color: rgba(255,255,255,.6); font-size: 1rem; line-height: 1.7; max-width: 460px; margin: 0 auto 2.5rem; }
+
+    .footer-wish p {
+      color: rgba(255, 255, 255, .6);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 460px;
+      margin: 0 auto 2.5rem;
+    }
+
     .footer-tag {
-      font-size: .78rem; color: rgba(255,255,255,.2);
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .2);
       letter-spacing: .1em;
     }
 
     /* ─── INTERSECTION OBSERVER ANIMATIONS ─── */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
+
 <body>
 
-<div class="bg-layer"></div>
-<div class="bg-img"></div>
-<div class="stars" id="stars"></div>
-<div class="floating-hearts" id="floatingHearts"></div>
+  <div class="bg-layer"></div>
+  <div class="bg-img"></div>
+  <div class="stars" id="stars"></div>
+  <div class="floating-hearts" id="floatingHearts"></div>
 
-<main>
+  <main>
 
-  <!-- ══════ HERO ══════ -->
-  <div class="hero">
-    <span class="birthday-badge">🎂 Special Delivery for Bujji Abhilaya 🎂</span>
-    <span class="hero-emoji">🎉</span>
-    <h1>Happy Birthday,</h1>
-    <span class="hero-name">Bujji Abhilaya ❤️</span>
-    <p class="hero-sub">My Bujji thalli — you are the most special thing that ever happened to me. Today is YOUR day — and I want to make sure you feel every bit of that 💫</p>
-    <div class="scroll-hint">
-      <span>Scroll down, love</span>
-      <span class="scroll-arrow">↓</span>
-    </div>
-  </div>
-
-  <!-- ══════ REASONS I LOVE YOU ══════ -->
-  <section class="reveal" id="reasons-section">
-    <p class="section-label">From Seshu, with all his heart</p>
-    <h2 class="section-title">Reasons why I love you, Bujji 💕</h2>
-    <div class="reasons-grid" id="reasonsGrid">
-      <div class="reason-card" style="animation-delay:.05s">
-        <div class="reason-icon">😂</div>
-        <div class="reason-title">Your laugh</div>
-        <div class="reason-text">It literally fixes everything broken in my day. The moment I hear you laugh, nothing else matters. Nothing.</div>
-      </div>
-      <div class="reason-card" style="animation-delay:.15s">
-        <div class="reason-icon">🫂</div>
-        <div class="reason-title">Your warmth</div>
-        <div class="reason-text">Nobody in this world makes me feel as safe and home as you do. You are my comfort in every chaos.</div>
-      </div>
-      <div class="reason-card" style="animation-delay:.25s">
-        <div class="reason-icon">💪</div>
-        <div class="reason-title">Your strength</div>
-        <div class="reason-text">Even when you're upset at me (like right now 😅), I admire how deeply you feel everything. You never fake it.</div>
-      </div>
-      <div class="reason-card" style="animation-delay:.35s">
-        <div class="reason-icon">🌙</div>
-        <div class="reason-title">The little things</div>
-        <div class="reason-text">The way you get excited over small things. The way you say my name. The texts at random hours. All of it.</div>
-      </div>
-      <div class="reason-card" style="animation-delay:.45s">
-        <div class="reason-icon">🌸</div>
-        <div class="reason-title">How you care</div>
-        <div class="reason-text">You care so deeply and so genuinely — about people, about moments, about us. That's rare. That's you.</div>
-      </div>
-      <div class="reason-card" style="animation-delay:.55s">
-        <div class="reason-icon">💫</div>
-        <div class="reason-title">Just… you being you</div>
-        <div class="reason-text">Bujji, you don't even know how magical you are. Every little thing about you — I chose it all, every single day.</div>
+    <!-- ══════ HERO ══════ -->
+    <div class="hero">
+      <span class="birthday-badge">🎂 Special Delivery for Bujji Nanoda 🎂</span>
+      <span class="hero-emoji">🎉</span>
+      <h1>Happy Birthday,</h1>
+      <span class="hero-name">Rey Bujji Yedava ❤️</span>
+      <p class="hero-sub">My Bujji thalli — you are the most special thing that ever happened to me. Today is YOUR day —
+        and I want to make sure you feel every bit of that 💫</p>
+      <div class="scroll-hint">
+        <span>Scroll down, love</span>
+        <span class="scroll-arrow">↓</span>
       </div>
     </div>
-  </section>
 
-  <!-- ══════ LETTER ══════ -->
-  <section class="reveal" id="letter-section">
-    <p class="section-label">A letter, straight from my heart</p>
-    <h2 class="section-title">Dear Bujji… 💌</h2>
-    <div class="letter-wrap">
-      <div class="letter-date">Written with love, on your birthday 🌸</div>
-      <div class="letter-text">
-        <p>
-          Hey <span class="highlight">Bujji Abhilaya</span>, happy birthday 🎂 — I know things have been a little rough between us lately, and I know you're probably still upset, and honestly… you have every right to be.
-        </p>
-        <p>
-          But I couldn't let this day go by without telling you how much you mean to me. <span class="highlight">You are not just my girlfriend — you are my favorite person in this whole world.</span> The person I want to tell everything to. The person whose voice I want to hear after a long, bad day.
-        </p>
-        <p>
-          I'm sorry for the fight. I'm sorry for whatever I said or didn't say. I'm sorry if I made you feel like anything less than the incredible, beautiful, irreplaceable person you are.
-        </p>
-        <p>
-          But today — <span class="highlight">today is about you, Bujji thalli.</span> About celebrating that you exist. That you walked into my life and made every single thing better just by being in it. You deserve all the love this world has to offer. And I want to be the one who gives it to you every day.
-        </p>
-        <p>
-          Even when we fight, even when it's hard — <span class="highlight">I would choose you again. Every time. Without hesitation.</span>
-        </p>
-        <p>
-          So please, for today at least — let your heart be happy. You deserve that. You deserve to feel celebrated and loved and so, so special. Because you ARE all of those things to me, Bujji Abhilaya.
-        </p>
-        <p>
-          I love you more than words can hold, Bujji thalli. <span class="highlight">More than I'll ever be able to properly say.</span> Happy Birthday 🎂❤️
-        </p>
-        <span class="letter-sign">— Seshuuu, forever yours 💕</span>
+    <!-- ══════ REASONS I LOVE YOU ══════ -->
+    <section class="reveal" id="reasons-section">
+      <p class="section-label">From Seshuuuu, with all his heart</p>
+      <h2 class="section-title">Reasons why I love you, Nana 💕</h2>
+      <div class="reasons-grid" id="reasonsGrid">
+        <div class="reason-card" style="animation-delay:.05s">
+          <div class="reason-icon">😂</div>
+          <div class="reason-title">Your laugh</div>
+          <div class="reason-text">It literally fixes everything broken in my day. The moment I hear you laugh, nothing
+            else matters. Nothing.</div>
+        </div>
+        <div class="reason-card" style="animation-delay:.15s">
+          <div class="reason-icon">🫂</div>
+          <div class="reason-title">Your warmth</div>
+          <div class="reason-text">Nobody in this world makes me feel as safe and home as you do. You are my comfort in
+            every chaos.</div>
+        </div>
+        <div class="reason-card" style="animation-delay:.25s">
+          <div class="reason-icon">💪</div>
+          <div class="reason-title">Your strength</div>
+          <div class="reason-text">Even when you're upset at me (like right now 😅), I admire how deeply you feel
+            everything. You never fake it.</div>
+        </div>
+        <div class="reason-card" style="animation-delay:.35s">
+          <div class="reason-icon">🌙</div>
+          <div class="reason-title">The little things</div>
+          <div class="reason-text">The way you get excited over small things. The way you scold me. The texts at random
+            hours. All of it.</div>
+        </div>
+        <div class="reason-card" style="animation-delay:.45s">
+          <div class="reason-icon">🌸</div>
+          <div class="reason-title">How you care</div>
+          <div class="reason-text">You care so deeply and so genuinely — about people, about moments, about us. That's
+            rare. That's you.</div>
+        </div>
+        <div class="reason-card" style="animation-delay:.55s">
+          <div class="reason-icon">💫</div>
+          <div class="reason-title">Just… you being you</div>
+          <div class="reason-text">Rey Bujji, you don't even know how magical you are. Every little thing about you — I
+            chose it all, every single day.</div>
+        </div>
       </div>
+    </section>
+
+    <!-- ══════ LETTER ══════ -->
+    <section class="reveal" id="letter-section">
+      <p class="section-label">A letter, straight from my heart</p>
+      <h2 class="section-title">Dear Chinni Thalli… 💌</h2>
+      <div class="letter-wrap">
+        <div class="letter-date">Written with love, on your birthday 🌸</div>
+        <div class="letter-text">
+          <p>
+            Hey <span class="highlight">Chinni Thalli</span>, happy birthday 🎂 — I know things have been a little rough
+            between us lately, and I know you're probably still upset, and honestly… you have every right to be.
+          </p>
+          <p>
+            But I couldn't let this day go by without telling you how much you mean to me. <span class="highlight">You
+              are not just my girlfriend — you are my favorite person in this whole world.</span> The person I want to
+            tell everything to. The person whose voice I want to hear after a long, bad day.
+          </p>
+          <p>
+            I'm sorry for the fight. I'm sorry for whatever I said or didn't say. I'm sorry if I made you feel like
+            anything less than the incredible, beautiful, irreplaceable person you are.
+          </p>
+          <p>
+            But today — <span class="highlight">today is about you, Bujji thalli.</span> About celebrating that you
+            exist. That you walked into my life and made every single thing better just by being in it. You deserve all
+            the love this world has to offer. And I want to be the one who gives it to you every day.
+          </p>
+          <p>
+            Even when we fight, even when it's hard — <span class="highlight">I would choose you again. Every time.
+              Without hesitation.</span>
+          </p>
+          <p>
+            So please, for today at least — let your heart be happy. You deserve that. You deserve to feel celebrated
+            and loved and so, so special. Because you ARE all of those things to me, Bujji Nanoda.
+          </p>
+          <p>
+            I love you more than words can hold, Bujji thalli. <span class="highlight">More than I'll ever be able to
+              properly say.</span> Happy Birthday 🎂❤️
+          </p>
+          <span class="letter-sign">— Seshuuu, forever yours 💕</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ PHOTO ══════ -->
+    <section class="reveal photo-section" id="photo-section">
+      <p class="section-label">This is for you, Bujji Nanoda 🌸</p>
+      <h2 class="section-title">These flowers are yours, Bujji thalli 💐</h2>
+
+      <div class="photo-frame">
+        <span class="petal">🌸</span>
+        <span class="petal">🌺</span>
+        <span class="petal">💐</span>
+        <span class="petal">🌹</span>
+        <img src="seshu.png" alt="Seshu holding flowers for Bujji" />
+      </div>
+
+      <div class="hbd-text">Happy Birthday ra Nana Bujjoda ! 🎂</div>
+      <p class="hbd-sub">Bujji thalli — these flowers are just a tiny piece of how much I love you 💕</p>
+      <span class="hbd-emojis">🎉🥳🎂</span>
+    </section>
+
+    <!-- ══════ FOOTER WISH ══════ -->
+    <div class="footer-wish reveal">
+      <span class="cake-spin">🎂</span>
+      <h2>Here's to you, Bujji Gabbodaaaa !! 🥂</h2>
+      <p>May this year bring you all the joy, peace and love you deserve, Bujji thalli. May every day feel as special as
+        you make mine feel. I'm so glad you were born 🌸</p>
+      <p class="footer-tag">Made with ❤️ by Seshu · Just for Bujji Nanoda · Happy Birthday 🎉</p>
     </div>
-  </section>
 
-  <!-- ══════ PHOTO ══════ -->
-  <section class="reveal photo-section" id="photo-section">
-    <p class="section-label">This is for you, Bujji Abhilaya 🌸</p>
-    <h2 class="section-title">These flowers are yours, Bujji thalli 💐</h2>
+  </main>
 
-    <div class="photo-frame">
-      <span class="petal">🌸</span>
-      <span class="petal">🌺</span>
-      <span class="petal">💐</span>
-      <span class="petal">🌹</span>
-      <img src="seshu.png" alt="Seshu holding flowers for Bujji" />
-    </div>
-
-    <div class="hbd-text">Happy Birthday, Bujji Abhilaya! 🎂</div>
-    <p class="hbd-sub">Bujji thalli — these flowers are just a tiny piece of how much I love you 💕</p>
-    <span class="hbd-emojis">🎉🥳🎂</span>
-  </section>
-
-  <!-- ══════ FOOTER WISH ══════ -->
-  <div class="footer-wish reveal">
-    <span class="cake-spin">🎂</span>
-    <h2>Here's to you, Bujji Abhilaya 🥂</h2>
-    <p>May this year bring you all the joy, peace and love you deserve, Bujji thalli. May every day feel as special as you make mine feel. I'm so glad you were born 🌸</p>
-    <p class="footer-tag">Made with ❤️ by Seshu · Just for Bujji Abhilaya · Happy Birthday 🎉</p>
-  </div>
-
-</main>
-
-<script>
-  // ─── STARS ───
-  const starsEl = document.getElementById('stars');
-  for (let i = 0; i < 120; i++) {
-    const s = document.createElement('div');
-    s.className = 'star';
-    const size = Math.random() * 2.5 + .5;
-    s.style.cssText = `
+  <script>
+    // ─── STARS ───
+    const starsEl = document.getElementById('stars');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + .5;
+      s.style.cssText = `
       width:${size}px; height:${size}px;
-      left:${Math.random()*100}vw; top:${Math.random()*100}vh;
-      animation-duration:${2+Math.random()*4}s;
-      animation-delay:${Math.random()*5}s;
+      left:${Math.random() * 100}vw; top:${Math.random() * 100}vh;
+      animation-duration:${2 + Math.random() * 4}s;
+      animation-delay:${Math.random() * 5}s;
     `;
-    starsEl.appendChild(s);
-  }
+      starsEl.appendChild(s);
+    }
 
-  // ─── FLOATING HEARTS ───
-  const fhEl = document.getElementById('floatingHearts');
-  const fhEmojis = ['❤️','💕','💗','💓','🌸','✨','💫','🦋','🌺','💞'];
-  for (let i = 0; i < 20; i++) {
-    const el = document.createElement('span');
-    el.className = 'fh';
-    el.textContent = fhEmojis[Math.floor(Math.random() * fhEmojis.length)];
-    el.style.cssText = `
-      left:${Math.random()*100}vw;
-      font-size:${1+Math.random()*1.5}rem;
-      animation-duration:${10+Math.random()*15}s;
-      animation-delay:${Math.random()*12}s;
+    // ─── FLOATING HEARTS ───
+    const fhEl = document.getElementById('floatingHearts');
+    const fhEmojis = ['❤️', '💕', '💗', '💓', '🌸', '✨', '💫', '🦋', '🌺', '💞'];
+    for (let i = 0; i < 20; i++) {
+      const el = document.createElement('span');
+      el.className = 'fh';
+      el.textContent = fhEmojis[Math.floor(Math.random() * fhEmojis.length)];
+      el.style.cssText = `
+      left:${Math.random() * 100}vw;
+      font-size:${1 + Math.random() * 1.5}rem;
+      animation-duration:${10 + Math.random() * 15}s;
+      animation-delay:${Math.random() * 12}s;
     `;
-    fhEl.appendChild(el);
-  }
+      fhEl.appendChild(el);
+    }
 
-  // ─── INTERSECTION OBSERVER ───
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.15 });
-  reveals.forEach(r => io.observe(r));
+    // ─── INTERSECTION OBSERVER ───
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    reveals.forEach(r => io.observe(r));
 
-  // ─── REASON CARDS stagger on reveal ───
-  const cardObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.reason-card').forEach(c => {
-          c.style.animationPlayState = 'running';
-        });
-      }
-    });
-  }, { threshold: 0.1 });
-  const rs = document.getElementById('reasons-section');
-  if (rs) cardObs.observe(rs);
-</script>
+    // ─── REASON CARDS stagger on reveal ───
+    const cardObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.reason-card').forEach(c => {
+            c.style.animationPlayState = 'running';
+          });
+        }
+      });
+    }, { threshold: 0.1 });
+    const rs = document.getElementById('reasons-section');
+    if (rs) cardObs.observe(rs);
+  </script>
 </body>
+
 </html>
