@@ -562,12 +562,12 @@
     const answers = [];
 
     function track(payload) {
-      if (!SCRIPT_URL || SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') return;
+      if (!SCRIPT_URL || SCRIPT_URL.includes('YOUR_APPS')) return;
       try {
         fetch(SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain' },
           body: JSON.stringify(payload)
         });
       } catch(e) {}
